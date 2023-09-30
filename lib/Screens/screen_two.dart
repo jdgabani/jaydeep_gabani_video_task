@@ -32,7 +32,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
   List video = [];
   Future<dynamic> getData() async {
     http.Response response = await http.get(Uri.parse(
-      "https://api.indiatvshowz.com/v1/getVideos.php?type=song&start-index=${pageIndex == 0 ? 1 : pageIndex + itemsPerPage}&max-results=$itemsPerPage&language%20id=1",
+      "https://api.indiatvshowz.com/v1/getVideos.php?type=song&start-index=${pageIndex == 0 ? 1 : pageIndex + itemsPerPage}&max-results=$itemsPerPage&language%50id=1",
     ));
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
